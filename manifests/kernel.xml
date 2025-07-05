@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
-    <remote name="eqe-github" fetch="https://github.com/moto-sm7550-devs" />
-    <default revision="master-kernel-build-2022" remote="aosp" sync-j="4" />
 
     <!-- Kernel -->
+    <remote name="eqe-github" fetch="https://github.com/moto-sm7550-devs" />
     <project remote="eqe-github" name="android_kernel_motorola_sm7550" path="sm7550" revision="lineage-22.1" />
     <project remote="eqe-github" name="android_kernel_motorola_sm7550-modules" path="sm7550-modules" revision="lineage-22.1" />
     <project remote="eqe-github" name="android_kernel_motorola_sm7550-devicetrees" path="sm7550-devicetrees" revision="lineage-22.1" />
+
+    <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+    <default revision="master-kernel-build-2022" remote="aosp" sync-j="4" />
 
     <superproject name="kernel/superproject" remote="aosp" revision="common-android13-5.15" />
 
